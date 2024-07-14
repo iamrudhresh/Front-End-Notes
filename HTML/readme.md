@@ -1,5 +1,6 @@
 
-```markdown
+
+
 # HTML Notes
 
 ## 1. Introduction to HTML
@@ -8,6 +9,7 @@
 - File Extension: `.html` or `.htm`
 
 ## 2. Basic Structure of an HTML Document
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
