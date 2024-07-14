@@ -1,237 +1,217 @@
-# **Introduction to CSS**
 
-CSS (Cascading Style Sheets) is a language used to describe the presentation of a document written in HTML. CSS selectors are used to "find" (or select) the HTML elements you want to style.
+---
 
-## 1. Container Element
-The HTML **div** element defines a container.
+# CSS Notes 
 
-```html
-<div>
-  <h1>Tourism</h1>
-  <p>Plan your trip wherever you want to go</p>
-  <button>Get Started</button>
-</div>
-```
+## Table of Contents
+1. [Introduction to CSS](#introduction-to-css)
+2. [CSS Syntax](#css-syntax)
+3. [Selectors](#selectors)
+4. [Color](#color)
+5. [Text](#text)
+6. [Box Model](#box-model)
+7. [Flexbox](#flexbox)
+8. [Grid](#grid)
+9. [Media Queries](#media-queries)
+10. [Conclusion](#conclusion)
 
-## CSS Properties
+## Introduction to CSS
 
-### Class Selector
-A CSS class selector selects elements with a specific class attribute. The class name starts with a dot (.) in the CSS.
+CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML. CSS defines how HTML elements should be displayed.
 
-```css
-.selector {
-  property1: value1; /* Declaration Block */
-  property2: value2;
-}
-```
+![CSS Example](https://via.placeholder.com/600x300.png?text=CSS+Example)
 
-## CSS Text Properties
+## CSS Syntax
 
-### 1. Text Align
-The CSS **text-align** property specifies the horizontal alignment of the text in an HTML element.
+A CSS rule consists of a selector and a declaration block.
 
 ```css
-.h-center {
-  text-align: center;
+selector {
+    property: value;
 }
 ```
 
-![Center Aligned Text](https://eraser.imgix.net/workspaces/DDWu6SYNWfw2qQA5zZeb/cW4TYXUmCph0yuFtGhfXbN9Xayl1/_iETRi5zCodpqEaYTbYFM.png?ixlib=js-3.7.0 "Center Aligned Text")
-
-### 2. Color
-The CSS **color** property specifies the color of the text.
+### Example:
 
 ```css
-.main-heading {
-  color: blue;
-}
-.paragraph {
-  color: grey;
+p {
+    color: blue;
+    font-size: 16px;
 }
 ```
 
-#### Sample Colors
-![Sample Colors](https://eraser.imgix.net/workspaces/DDWu6SYNWfw2qQA5zZeb/cW4TYXUmCph0yuFtGhfXbN9Xayl1/AQ2l2N1V2a2UeUWyCEwAo.png?ixlib=js-3.7.0 "Sample Colors")
+![CSS Syntax](https://via.placeholder.com/600x300.png?text=CSS+Syntax)
 
-## CSS Colors
+## Selectors
 
-### 1. Hex Code
-CSS Colors can be represented in multiple ways:
+Selectors are used to target the HTML elements you want to style.
 
-- Color names
-- Hex Code
-- HSL
-- RGB and more...
+### Types of Selectors:
 
-Since few colors have Color names, Hex Codes make a good alternative to pick a wide variety of colors.
+1. **Element Selector** - Targets HTML elements by their name.
+   ```css
+   p {
+       color: red;
+   }
+   ```
+2. **Class Selector** - Targets elements by their class attribute.
+   ```css
+   .my-class {
+       background-color: yellow;
+   }
+   ```
+3. **ID Selector** - Targets elements by their id attribute.
+   ```css
+   #my-id {
+       font-weight: bold;
+   }
+   ```
+4. **Universal Selector** - Targets all elements.
+   ```css
+   * {
+       margin: 0;
+       padding: 0;
+   }
+   ```
 
-#### Sample Colors and Hex Codes
-![Hex Codes](https://eraser.imgix.net/workspaces/DDWu6SYNWfw2qQA5zZeb/cW4TYXUmCph0yuFtGhfXbN9Xayl1/DeWO-z4go5r2ZNoeaC9Q7.png?ixlib=js-3.7.0 "Hex Codes")
+![CSS Selectors](https://via.placeholder.com/600x300.png?text=CSS+Selectors)
+
+## Color
+
+You can set colors using names, HEX, RGB, or HSL values.
+
+### Examples:
 
 ```css
-.button {
-  color: #25b1cc;
+/* Named Color */
+h1 {
+    color: red;
+}
+
+/* HEX Color */
+h2 {
+    color: #00ff00;
+}
+
+/* RGB Color */
+p {
+    color: rgb(0, 0, 255);
+}
+
+/* HSL Color */
+div {
+    color: hsl(120, 100%, 50%);
 }
 ```
 
-#### How to Pick a Color Using Hex Code
-One of the simplest ways to access a color picker is:
+![CSS Colors](https://via.placeholder.com/600x300.png?text=CSS+Colors)
 
-1. Open Google.
-2. Type _color picker_ in the search bar and hit enter.
+## Text
 
-![Color Picker](https://eraser.imgix.net/workspaces/DDWu6SYNWfw2qQA5zZeb/cW4TYXUmCph0yuFtGhfXbN9Xayl1/hKH46TBslA9DM1kerXY7_.png?ixlib=js-3.7.0 "Color Picker")
+Styling text involves properties like `color`, `font-size`, `font-family`, `text-align`, etc.
 
-### 3. Font Family
-The CSS **font-family** property specifies the font for an element.
+### Examples:
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-
-.main-heading {
-  font-family: "Roboto", sans-serif;
-}
-.paragraph {
-  font-family: "Roboto", sans-serif;
+h1 {
+    color: purple;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    text-align: center;
 }
 ```
 
-You can use one of the values for the **font-family** property as shown below:
+![CSS Text](https://via.placeholder.com/600x300.png?text=CSS+Text)
 
-![Font Family](https://eraser.imgix.net/workspaces/DDWu6SYNWfw2qQA5zZeb/cW4TYXUmCph0yuFtGhfXbN9Xayl1/KwpDbSv8A1qU3H1urzYpU.png?ixlib=js-3.7.0 "Font Family")
+## Box Model
 
-**Note:**
-1. To use custom fonts, import their stylesheets into your CSS file.
-2. Ensure there are no spelling mistakes in the font-family values.
-3. Enclose the font-family value in quotation marks if it contains spaces.
+The box model consists of `margin`, `border`, `padding`, and `content`.
 
-### 4. Font Size
-The CSS **font-size** property specifies the size of the font.
+### Example:
 
 ```css
-.main-heading {
-  font-size: 36px;
-}
-.paragraph {
-  font-size: 28px;
+div {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 25px;
 }
 ```
 
-### 5. Font Style
-The CSS **font-style** property specifies the font style for text.
+![CSS Box Model](https://via.placeholder.com/600x300.png?text=CSS+Box+Model)
+
+## Flexbox
+
+Flexbox is used to design a flexible and responsive layout structure.
+
+### Example:
 
 ```css
-.main-heading {
-  font-style: italic;
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-.paragraph {
-  font-style: normal;
+
+.item {
+    flex: 1;
+    margin: 10px;
 }
 ```
 
-You can use one of the values for the **font-style** property as shown below:
+![CSS Flexbox](https://via.placeholder.com/600x300.png?text=CSS+Flexbox)
 
-![Font Style](https://eraser.imgix.net/workspaces/DDWu6SYNWfw2qQA5zZeb/cW4TYXUmCph0yuFtGhfXbN9Xayl1/4-U22uEZI0tinEX9t6tVU.png?ixlib=js-3.7.0 "Font Style")
+## Grid
 
-### 6. Font Weight
-The CSS **font-weight** property specifies how thick or thin characters in text should be displayed.
+CSS Grid Layout is a two-dimensional layout system.
+
+### Example:
 
 ```css
-.main-heading {
-  font-weight: bold;
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
-.paragraph {
-  font-weight: 200;
+
+.item {
+    padding: 20px;
+    background-color: lightgrey;
 }
 ```
 
-You can use one of the values for the **font-weight** property as shown below:
+![CSS Grid](https://via.placeholder.com/600x300.png?text=CSS+Grid)
 
-![Font Weight](https://eraser.imgix.net/workspaces/DDWu6SYNWfw2qQA5zZeb/cW4TYXUmCph0yuFtGhfXbN9Xayl1/6JcCeUNHvtdg9DTdxWubc.png?ixlib=js-3.7.0 "Font Weight")
+## Media Queries
 
-**Note:**
-1. Ensure there are no spelling mistakes in the font-weight values.
-2. Do not use quotations around the font-weight values.
-3. Numerical values for font-weight must be multiples of 100 between 100 and 900.
+Media queries are used to apply different styles for different devices or screen sizes.
 
-### 7. Text Decoration
-The CSS **text-decoration** property specifies the decoration added to the text.
+### Example:
 
 ```css
-.main-heading {
-  text-decoration: underline;
+/* For tablets and larger screens */
+@media (min-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
 }
-.paragraph {
-  text-decoration: overline;
-}
-```
 
-You can use one of the values for the **text-decoration** property as shown below:
-
-![Text Decoration](https://eraser.imgix.net/workspaces/DDWu6SYNWfw2qQA5zZeb/cW4TYXUmCph0yuFtGhfXbN9Xayl1/WEHXrSfZ19N8j4URJj6hJ.png?ixlib=js-3.7.0 "Text Decoration")
-
-**Note:**
-1. Ensure there are no spelling mistakes in the text-decoration values.
-2. Do not use quotations around the text-decoration values.
-3. Ensure that `text-decoration` and `line-through` are hyphenated.
-
-## CSS Background Properties
-
-### 1. Background Color
-The CSS **background-color** property specifies the background color of an HTML element.
-
-```css
-.card {
-  background-color: lightblue;
+/* For mobile devices */
+@media (max-width: 599px) {
+    body {
+        background-color: lightcoral;
+    }
 }
 ```
 
-### 2. Background Image
-The CSS **background-image** property specifies the background image of an HTML element.
+![CSS Media Queries](https://via.placeholder.com/600x300.png?text=CSS+Media+Queries)
 
-```css
-.card {
-  background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/ocean.jpg");
-}
-```
+## Conclusion
 
-![Background Image](https://eraser.imgix.net/workspaces/DDWu6SYNWfw2qQA5zZeb/cW4TYXUmCph0yuFtGhfXbN9Xayl1/iDR4mO658tQFPZEQ3SHsm.png?ixlib=js-3.7.0 "Background Image")
+CSS is a powerful tool for web developers to create visually appealing and responsive web pages. Practice the examples provided and experiment with different properties and values to get a deeper understanding of CSS.
 
-**Warning:**
-1. The background image takes the height of the content of an HTML element if you don't specify the height.
-2. The URL given to the background-image must be valid.
+Happy Styling!
 
-### 3. Background Size
-The CSS **background-size** property specifies the size of the background image of an HTML element.
+![CSS Conclusion](https://via.placeholder.com/600x300.png?text=Happy+Styling!)
 
-![Background Size](https://eraser.imgix.net/workspaces/DDWu6SYNWfw2qQA5zZeb/cW4TYXUmCph0yuFtGhfXbN9Xayl1/PRaTGcZlwyatK2gL6WsNt.png?ixlib=js-3.7.0 "Background Size")
-
-**HTML:**
-
-```html
-<!DOCTYPE html>
-<html>
-  <head></head>
-  <body>
-    <div class="card">
-      <h1>Tourism</h1>
-      <p>Plan your trip wherever you want to go</p>
-      <button>Get Started</button>
-    </div>
-  </body>
-</html>
-```
-
-**CSS:**
-
-```css
-.card {
-  background-image: url("https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/ocean.jpg");
-  background-size: cover;
-  width: 250px;
-  height: 200px;
-}
-```
-
-## Summary
-CSS allows you to style HTML elements in various ways, including text alignment, color, font properties, text decoration, and background properties. Understanding and applying these properties can greatly enhance the visual appeal and functionality of your web pages.
+---
