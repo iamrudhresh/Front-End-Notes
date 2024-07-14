@@ -1,12 +1,11 @@
-Sure! Below is the content structured as a README file for your HTML notes. You can copy this text and save it as `README.md`.
 
 ```markdown
 # HTML Notes
 
 ## 1. Introduction to HTML
-- **HTML**: HyperText Markup Language
-- **Purpose**: Standard markup language for creating web pages.
-- **File Extension**: `.html` or `.htm`
+- HTML : HyperText Markup Language
+- Purpose: Standard markup language for creating web pages.
+- File Extension: `.html` or `.htm`
 
 ## 2. Basic Structure of an HTML Document
 ```html
